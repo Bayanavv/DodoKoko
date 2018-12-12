@@ -6,62 +6,66 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="81dp"
-    android:background="@drawable/DodoKokoBackGround">
+    android:background="@drawable/dodokokobackground">
 
 
     <ImageButton
         android:id="@+id/btnStart"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="134dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:adjustViewBounds="true"
         android:background="@null"
+        android:contentDescription="@null"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/DodoKokoAboutTheAplicationButtons"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="212dp"
-        tools:srcCompat="@drawable/DodoKokoStartButtons" />
+        app:layout_constraintBottom_toTopOf="@+id/btnMenue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dodokokoplay" />
 
     <ImageButton
         android:id="@+id/btnMenue"
-        android:layout_width="85dp"
-        android:layout_height="85dp"
+        android:layout_width="76dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="8dp"
         android:adjustViewBounds="true"
         android:background="@null"
+        android:contentDescription="@null"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/DodoKokoOptionButtons"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="370dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnMoreInfo"
+        app:layout_constraintEnd_toEndOf="@+id/btnStart"
+        app:layout_constraintStart_toStartOf="@+id/btnStart"
+        app:srcCompat="@drawable/dodokokomenue" />
 
     <ImageButton
         android:id="@+id/btnMoreInfo"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="53dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:adjustViewBounds="true"
         android:background="@null"
+        android:contentDescription="@null"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/DodoKokoAboutTheAplicationButtons"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="463dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnMenue"
+        app:layout_constraintStart_toStartOf="@+id/btnMenue"
+        app:srcCompat="@drawable/dodokokomoreinfo" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        app:srcCompat="@drawable/DodoKodoLogo"
-        tools:layout_editor_absoluteY="8dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
-
+        android:id="@+id/imageLogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dodokokologo" />
 </android.support.constraint.ConstraintLayout>
