@@ -16,7 +16,7 @@ public class IntroActivity extends AppCompatActivity {
 
         imageLogo = findViewById(R.id.imageLogo);
 
-        ((View) imageLogo).animate().setDuration(1000).rotation(360);
+        ((View) imageLogo).animate().setDuration(2000).rotation(720);
     }
 
 
