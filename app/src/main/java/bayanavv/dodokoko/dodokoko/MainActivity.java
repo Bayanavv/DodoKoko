@@ -1,5 +1,6 @@
 package bayanavv.dodokoko.dodokoko;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,41 +12,22 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     //Properties:
 
-    private ImageButton btnStart;
-    private ImageButton btnMenue;
-    private ImageButton btnMoreInfo;
+    private Object view;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        }
 
-        //activey.setContentView(xml layout)
-        btnStart = findViewById(R.id.btnStart);
-        btnMenue = findViewById(R.id.btnMenue);
-        btnMoreInfo = findViewById(R.id.btnMoreInfo);
+    public void start(View view) {
+        Intent intent = new Intent(MainActivity.this,GameActivity.class);
+        startActivity(intent);
+    }
 
+    public void Menue(View view) {
+    }
 
-        //code that runs onClick
-
-        btnStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Start button", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        btnMenue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Menue Button", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        btnMoreInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "More info button", Toast.LENGTH_SHORT).show();
-            }
-        });
+    public void moreInfo(View view) {
     }
 }
